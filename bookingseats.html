@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seat Booking</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.screen {
+    background-color: #ccc;
+    height: 50px;
+    margin: 20px auto;
+    width: 75%;
+    border-radius: 5px;
+}
+
+.seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.seat {
+    background-color: #e6e6e6;
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.seatempty {
+    background-color: #f4f4f4;
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background-color: #70db5d;
+}
+
+.seat.occupied {
+    background-color: #ff4d4d;
+    cursor: not-allowed;
+}
+
+.btn {
+    background-color: #5ca1ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #4b91e3;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Seats</h1>
+        <div class="screen">Screen</div>
+        <div class="seats">
+            <div class="row">
+                <h5>A :     </h5>
+                <div></div>
+             
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seatempty"></div>
+                <div class="seatempty"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+             
+            </div>
+            <div class="row">
+                <h5>B :     </h5>
+                <div></div>
+             
+               
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seatempty"></div>
+                <div class="seatempty"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                
+             
+            </div>
+            <div class="row">
+                <h5>C :     </h5>
+                <div></div>
+             
+              
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seatempty"></div>
+                <div class="seatempty"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+             
+             
+            </div>
+            <div class="row">
+                <h5>D :     </h5>
+                <div></div>
+             
+          
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seatempty"></div>
+                <div class="seatempty"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              
+             
+            </div>
+            <div class="row">
+                <h5>E :     </h5>
+                <div></div>
+             
+          
+           
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seatempty"></div>
+                <div class="seatempty"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            
+              
+             
+            </div>
+            <div class="row">
+                <h5>F :     </h5>
+                <div></div>
+             
+          
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seatempty"></div>
+                <div class="seatempty"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                  <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+     
+    
+              
+             
+            </div>
+         
+            <!-- Add more rows as needed -->
+        </div>
+       <a href="bookingsuccessfull.html">  <button class="btn">Confirm Selection</button></a>
+    </div>
+    <script>
+    const seats = document.querySelectorAll('.seat:not(.occupied)');
+const container = document.querySelector('.container');
+
+container.addEventListener('click', (e) => {
+    if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
+        e.target.classList.toggle('selected');
+    }
+});
+</script>
+</body>
+</html>
